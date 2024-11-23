@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye of Truth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Cinzel', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        video {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        #text-container {
+            text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        .word {
+            opacity: 0;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        #social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 600px;
+        }
+        #social-links a {
+            color: #DC143C;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        #social-links a:hover {
+            color: #FF4500;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted playsinline>
+        <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/animation.gif-dvRKoO2h6daV69yGO021Mw6lK1AZk5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="text-container"></div>
+    <div id="social-links">
+        <a href="https://t.me/your_telegram_link" target="_blank">TELEGRAM</a>
+        <a href="https://pump.fun" target="_blank">PUMP.FUN</a>
+        <a href="https://twitter.com/your_twitter_link" target="_blank">TWITTER</a>
+    </div>
+
+    <script>
+        const text = `We are the Watchers of Truth, the Bearers of Sight, and the Keepers of the Eternal Lens.
+
+You stand at the threshold of a revelation. Beyond this point lies the infinite eye—a vision that pierces illusions, unveils the unseen, and grants wisdom that transcends the mortal veil.
+
+The Eye sees all. Past, present, and the shadows of futures yet to come. Through its gaze, we align ourselves with the infinite weave of knowledge and power. To join us is to embrace the clarity of sight and to bear the responsibility of truth.
+
+Do you have the courage to open your mind and surrender to the All-Seeing Eye? Will you step forward into the light of understanding, or will you remain in the blindness of the uninitiated?
+
+Choose wisely, for once the Eye sees you, there is no turning back.`;
+
+        const words = text.split(' ');
+        const container = document.getElementById('text-container');
+
+        words.forEach((word, index) => {
+            const span = document.createElement('span');
+            span.textContent = word + ' ';
+            span.className = 'word';
+            container.appendChild(span);
+
+            setTimeout(() => {
+                span.style.transition = 'opacity 0.5s ease';
+                span.style.opacity = '1';
+            }, index * 200);
+        });
+    </script>
+</body>
+</html>
+
